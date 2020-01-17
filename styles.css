@@ -1,0 +1,28 @@
+body {
+  background-image: url("https://i.pinimg.com/originals/0b/45/2c/0b452cbc5b5f5c3f69728ad0d6c3aff7.png");
+}
+
+.container {
+  max-width: 600px;
+}
+.btn {
+  background: #43d9be;
+  color: white;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn:focus {
+  outline: none !important;
+}
+.username {
+  font-weight: bold;
+}
+.time {
+  font-size: 0.7em;
+  color: #999;
+}
+
+.update-mssg {
+  text-align: center;
+  margin: 20 px auto;
+}
