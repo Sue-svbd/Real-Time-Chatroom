@@ -13,7 +13,7 @@ class Chatroom {
       message: message,
       username: this.username,
       room: this.room,
-      created_at: firebase.firestore.Timestamp.fromDate(now)
+      created_at: firebase.firestore.Timestamp.fromDate(now),
     };
     // save the chat docs
     const response = await this.chats.add(chat);
@@ -24,8 +24,8 @@ class Chatroom {
     this.unsub = this.chats
       .where("room", "==", this.room)
       .orderBy("created_at")
-      .onSnapshot(snapshot => {
-        snapshot.docChanges().forEach(change => {
+      .onSnapshot((snapshot) => {
+        snapshot.docChanges().forEach((change) => {
           if (change.type === "added") {
             //update the UI
             callback(change.doc.data());
